@@ -1,0 +1,13 @@
+
+syntax = "proto3";
+
+option go_package = "github.com/AnuragProg/grpc-chat-fullstack";
+
+
+message Message {
+	string msg = 1;	
+}
+
+service ChatService {
+	rpc Converse(stream Message) returns (stream Message);
+}
