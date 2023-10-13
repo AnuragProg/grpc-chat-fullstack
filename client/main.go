@@ -18,7 +18,7 @@ func log_replies(socket pb.ChatService_ConverseClient) error {
 			log.Println("Closing connection with server")
 			return nil
 		}
-		fmt.Println("Reply:", msg.GetMsg())
+		fmt.Println(msg.GetMsg())
 	}
 }
 
