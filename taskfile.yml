@@ -4,10 +4,16 @@ version: '3'
 tasks:
   dev:
       deps: [server, client]
+
   client:
     cmds:
       - go run client/main.go
+
   server:
     cmds:
       - go run server/main.go
-
+  
+  upload-code:
+    cmds:
+      - git add .
+      - git commit -m {{.CLI_ARGS}}
